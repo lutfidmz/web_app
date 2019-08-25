@@ -41,10 +41,12 @@ $username = "root";
 $password = "#B!smillah";
 $dbname = "fgsis_msg";
 
-$nama = $_POST['txtNama'];
-$wa = $_POST['txtWa'];
-$sekolah = $_POST['txtAs'];
-$ket = $_POST['txtKet'];
+// ini nanti link bentuk pesannya dikirim ke wa info fg aja
+$text = $_GET['text'];
+$num = $_GET['num'];
+$message = rawurlencode($text);
+$url = "https://api.whatsapp.com/send?phone=".$num."&text=".$message;
+echo $url;
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
