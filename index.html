@@ -29,6 +29,86 @@
                 margin: 20px 0;
                 font-size: 5em;
             }
+
+            .images-container {
+                position: relative;
+                width: 100%;
+            }
+
+            .images{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .images-overlay{
+                position: absolute;
+                bottom: 0;
+                background: rgb(0, 0, 0);
+                background: rgba(0, 0, 0, 0.5); /* Black see-through */
+                color: #f1f1f1;
+                width: 100%;
+                transition: .5s ease;
+                /* opacity:0; */
+                color: white;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .c-container {
+            display: flex;
+            width: 100%;
+            padding: 4% 2%;
+            box-sizing: border-box;
+            height: 40vh;
+            }
+
+            .c-box {
+            flex: 1;
+            overflow: hidden;
+            transition: .5s;
+            margin: 0 0.5%;
+            box-shadow: 0 20px 30px rgba(0,0,0,.1);
+            line-height: 0;
+            }
+
+            .c-box > a > img {
+            width: 200%;
+            height: calc(100% - 10vh);
+            object-fit: cover; 
+            transition: .5s;
+            }
+
+            .c-box > span {
+            font-size: 3.8vh;
+            display: block;
+            text-align: center;
+            height: 10vh;
+            line-height: 2.6;
+            color: white;
+            position: absolute;
+            bottom: 12vh;
+            padding-left: 8pt;
+            }
+
+            .c-box:hover > span {
+                opacity: 0;
+            }
+
+            .c-box:hover { flex: 1 1 50%; }
+            .c-box:hover > a > img {
+            width: 100%;
+            height: 100%;
+            }
+
+            .margin-top-5vh{
+                margin-top: 5vh;
+            }
+            
+            .mt-2{
+                margin-top: 2vh;
+            }
         </style>
     </head>
     <body>
@@ -37,7 +117,7 @@
                 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
             <![endif]-->
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-20">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-5vh">
                 <h1 class="templatemo-site-title">
                     <a href="#">Portal Informasi Sekolah</a>
                 </h1>
@@ -59,7 +139,7 @@
             </div>
 
             <div class="container">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 templatemo-content-wrapper">
+                <div id="container-main" class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 templatemo-content-wrapper">
                     <div class="templatemo-content">
                         
                         <section id="menu-section" class="active">
@@ -81,7 +161,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#about" class="change-section">
+                                    <a  href="#about" class="change-section bigSection">
                                         <div class="black-bg btn-menu">
                                             <i class="fas fa-user-graduate"></i>
                                             <h2>Kegiatan KBM</h2>
@@ -153,14 +233,14 @@
                             <div class="row">
                                 <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                        <h2>WEB DESIGN</h2>
-                                        <p>Zoom is free HTML5 website template for everyone. You can use this template for any purpose. Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for photos used in this template. Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
+                                        <h2>Visi</h2>
+                                        <p>Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                        <h2>RESPONSIVE</h2>
-                                        <p><span class="green">Zoom template is a mobile-ready layout supporting all kinds of mobile devices or different screen sizes.</span> Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Curabitur nec aliquam lacus, nec molestie erat.</p>
+                                        <h2>Misi</h2>
+                                        <p>Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Curabitur nec aliquam lacus, nec molestie erat. . Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
                                     </div>
                                 </div>
                             </div>
@@ -178,12 +258,26 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12">
                                     <div class="col-sm-12 col-md-12 col-lg-12 black-bg">
-                                        <h2>OUR SERVICES</h2>
+                                        <h2>Program Bahasa</h2>
                                         <p>Aenean quis semper metus. <a href="#">Maecenas</a> adipiscing, leo a facilisis tempor, mi quam feugiat eros, ullamcorper porttitor elit turpis ac risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non sem a leo mattis dapibus. Duis vel ornare arcu. Quisque at malesuada tortor.</p>
                                         <p>Quisque non tempus lacus, non placerat arcu. Donec nibh ipsum, pharetra nec pellentesque at, mattis ut lorem. Fusce dapibus tristique neque, eget ultricies lorem tincidunt vitae. Aliquam erat volutpat. Integer vulputate ultricies nisl, sed vehicula justo accumsan non.</p>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row mt-2">
+                                    <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                            <h2>Program IPA</h2>
+                                            <p>Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                            <h2>Program IPS</h2>
+                                            <p>Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Curabitur nec aliquam lacus, nec molestie erat. . Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="row margin-top-20">
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
                                     <a href="#menu" class="change-section">
@@ -197,40 +291,112 @@
                         <section id="about-section" class="inactive">
                             <div class="row">
                                 <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                    <h2 class="text-center">Kegiatan</h2>
-                                    <div class="col-sm-6 col-md-6">
-                                        <!-- <p>Cras sed venenatis nunc. Nunc porta blandit arcu ac fringilla. Quisque feugiat fringilla vulputate. Vestibulum tempus ligula ac leo scelerisque, nec bibendum neque molestie. Suspendisse potenti. Donec aliquet ligula quis convallis placerat. Sed mollis rhoncus varius. Donec non adipiscing mi, nec venenatis lorem. <a href="#">Vivamus</a> nec convallis ante, in aliquam massa.</p> -->
-                                        <!-- <img src="images/zoom-bg-2.jpg" alt="notext" class="img-thumbnail "> -->
-
-                                        <!-- http://kenwheeler.github.io/slick/ -->
-
-                                        <div class="chocolat-parent" data-chocolat-title="set title">
-                                            <a class="chocolat-image" href="images/zoom-bg-1.jpg" title="caption image 1">
-                                                <img width="100" src="images/zoom-bg-1.jpg" />
-                                            </a>
-                                            <a class="chocolat-image" href="images/zoom-bg-2.jpg" title="caption image 2">
-                                                <img width="100" src="images/zoom-bg-2.jpg" />
-                                            </a>
-                                            <a class="chocolat-image" href="images/zoom-bg-3.jpg" title="caption image 3">
-                                                <img width="100" src="images/zoom-bg-3.jpg"/>
-                                            </a>
+                                    <h2 class="text-center">Kegiatan KBM</h2>
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="c-container">
+                                            <div class="c-box">
+                                                <a href="http://www.youtube.com/watch?v=c0KYU2j0TM4"
+                                                   class="fresco"
+                                                   data-fresco-group="panahan"
+                                                   data-fresco-caption="Caption below the image"><img src="images/zoom-bg-1.jpg" /></a>
+                                                 <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="panahan">Image 2</a>
+                                                <span>Judul</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x804"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="futsal"><img src="https://source.unsplash.com/1000x804" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="futsal">Image 2</a>>
+                                                <span>Judul</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x806"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x806" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="unique_name">Image 2</a>>
+                                                <span>Judul</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x807"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x807" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="unique_name">Image 2</a>>
+                                                <span>Judul</span>
+                                            </div>
                                         </div>
-
-                                        <a href="images/zoom-bg-1.jpg"
-                                        class="fresco"
-                                        data-fresco-group="unique_name"><img width="100" src="images/zoom-bg-1.jpg" /></a>
-                                        <a href="images/zoom-bg-2.jpg"
-                                        class="fresco hidden"
-                                        data-fresco-group="unique_name">Image 2</a>
                                     </div>
-                                    <div class="col-sm-6 col-md-6">
+                                    <div style="margin-top: -8vh" class="col-sm-12 col-md-12">
+                                        <div class="c-container">
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="panahan"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x824" /></a>
+                                                 <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="panahan">Image 2</a>
+                                                <span>Judul</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x814"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="futsal"><img src="https://source.unsplash.com/1000x814" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="futsal">Image 2</a>>
+                                                <span>Judul</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x816"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x816" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="unique_name">Image 2</a>>
+                                                <span>Judul</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x817"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x817" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="unique_name">Image 2</a>>
+                                                <span>Judul</span>
+                                            </div>
+                                    </div>
+                                    <!-- <div class="col-sm-6 col-md-6">
                                         <p>Sed ac risus sit amet nisl tempus egestas. Sed a fermentum mauris, nec ultricies lorem. Maecenas auctor a augue sodales aliquam. Vestibulum imperdiet quam vel felis dignissim, sed iaculis nulla malesuada. Vivamus non rhoncus neque, sed elementum lorem. Aenean non leo mauris. Donec at suscipit lectus. Donec justo ipsum, scelerisque eu nisl in, sollicitudin posuere justo.</p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
+                            </div>
+                            
                             <div class="row margin-top-20">
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                    <a href="#menu" class="change-section">
+                                    <a href="#menu" class="change-section btnBigSection">
                                         <div class="black-bg btn-menu">
                                             <h2>Back to menu</h2>
                                         </div>
@@ -352,12 +518,30 @@
 
 
         <script type="text/javascript" src="js/jquery.chocolat.js"></script>
-        <script type="text/javascript" src="js/fresco.js"></script>
+        <script type="text/javascript" src="js/fresco-try.js"></script>
         
 
         <script>
+            var section = '';
+
             $(document).ready(function(){
                 $('.chocolat-parent').Chocolat();
+            });
+
+            $('.bigSection').click(()=>{
+                section = 'big';
+                $("#container-main").removeClass('col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2');
+                $("#container-main").addClass('col-lg-12 col-md-12');
+                $('.templatemo-site-title').hide();
+            });
+
+            $('.btnBigSection').click((e)=>{
+                if (section == 'big') {
+                    section =='';
+                    $("#container-main").addClass('col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2');
+                    $("#container-main").removeClass('col-lg-12 col-md-12');
+                    $('.templatemo-site-title').show();
+                }
             });
         </script>
     </body> 
