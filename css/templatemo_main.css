@@ -146,6 +146,49 @@ img.slide {
 .black-bg:after {
     clear: both;
 }
+
+.black-bg-1 {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 40px 40px 0 0;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+}
+.black-bg-1:before, .black-bg-1:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.black-bg-1:after {
+    clear: both;
+}
+
+.black-bg-2 {
+    background-color: rgba(0,0,0,0.8);
+    /* border-radius: 40px 40px 0 0; */
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+}
+.black-bg-2:before, .black-bg-2:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.black-bg-2:after {
+    clear: both;
+}
+
+.black-bg-3 {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 0 0 40px 40px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+}
+.black-bg-3:before, .black-bg-3:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.black-bg-3:after {
+    clear: both;
+}
+
     
 .templatemo-content section {
     font-family: 'Raleway', sans-serif;
