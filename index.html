@@ -24,127 +24,7 @@
         <link rel="stylesheet" href="css/fresco/fresco.css"/>  
         <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
         <style>
-            .fas{
-                margin: 20px 0;
-                font-size: 5em;
-            }
 
-            .images-container {
-                position: relative;
-                width: 100%;
-            }
-
-            .images{
-                display: block;
-                width: 100%;
-                height: auto;
-            }
-
-            .images-overlay{
-                position: absolute;
-                bottom: 0;
-                background: rgb(0, 0, 0);
-                background: rgba(0, 0, 0, 0.5); /* Black see-through */
-                color: #f1f1f1;
-                width: 100%;
-                transition: .5s ease;
-                /* opacity:0; */
-                color: white;
-                font-size: 20px;
-                padding: 20px;
-                text-align: center;
-            }
-
-            .c-container {
-            display: flex;
-            width: 100%;
-            padding: 4% 2%;
-            box-sizing: border-box;
-            height: 40vh;
-            }
-
-            .c-box {
-            flex: 1;
-            overflow: hidden;
-            transition: .5s;
-            margin: 0 0.5%;
-            box-shadow: 0 20px 30px rgba(0,0,0,.1);
-            line-height: 0;
-            }
-
-            .c-box > a > img {
-            width: 200%;
-            height: calc(100% - 10vh);
-            object-fit: cover; 
-            transition: .5s;
-            }
-
-            .c-box > span {
-            font-size: 3.8vh;
-            display: block;
-            text-align: center;
-            height: 10vh;
-            line-height: 2.6;
-            color: white;
-            position: absolute;
-            bottom: 13.5vh;
-            padding-left: 8pt;
-            }
-
-            .c-box:hover > span {
-                opacity: 0;
-            }
-
-            .c-box:hover { flex: 1 1 50%; }
-            .c-box:hover > a > img {
-            width: 100%;
-            height: 100%;
-            }
-
-            .margin-top-5vh{
-                margin-top: 5vh;
-            }
-            
-            .mt-2{
-                margin-top: 2vh;
-            }
-            
-            @media only screen and (max-width: 2048px) {
-                h4{
-                    font-size: 14px;
-                }
-            }
-
-            @media only screen and (max-width: 767px) {
-                h4{
-                    font-size: 18px;
-                }
-            }
-
-            .link-tautan {
-                font-size: 13pt;
-                text-align: center;
-                color: #fff;
-                transition: 0.1s ease-in;
-            }
-
-
-            .link-tautan > i:hover {
-                text-align: center;
-                color: rgb(175, 225, 238);
-                transform: scale(1.1);
-                transition: 0.1s ease-in;
-            }
-
-            .black-bg-2{
-                padding: 20px 5px;
-                text-align: center;
-            }
-
-            .black-bg-3{
-                padding: 20px 5px;
-                text-align: center;
-            }
         </style>
     </head>
     <body>
@@ -165,9 +45,14 @@
             <div class="image-section">
                 <div class="image-container">
                     <img src="images/zoom-bg-1.jpg" id="menu-img" class="main-img inactive" alt="Zoom HTML5 Template by templatemo.com">
-                    <img src="images/zoom-bg-2.jpg" id="products-img" class="inactive" alt="Product">
-                    <img src="images/zoom-bg-3.jpg" id="services-img"  class="inactive" alt="Services">
-                    <img src="images/zoom-bg-4.jpg" id="about-img" class="inactive" alt="About">
+                    <img src="images/zoom-bg-2.jpg" id="profil-img" class="inactive" alt="Profil Sekolah">
+                    <img src="images/zoom-bg-3.jpg" id="program-img"  class="inactive" alt="Program Unggulan">
+                    <img src="images/zoom-bg-4.jpg" id="kbm-img" class="inactive" alt="Kegiatan KBM">
+                    <img src="images/zoom-bg-5.jpg" id="fasilitas-img" class="inactive" alt="fasilitas">
+                    <img src="images/zoom-bg-5.jpg" id="softskill-img" class="inactive" alt="Penguatan Softskill">
+                    <img src="images/zoom-bg-5.jpg" id="organisasi-img" class="inactive" alt="Pembelajaran Organisasi">
+                    <img src="images/zoom-bg-5.jpg" id="alumni-img" class="inactive" alt="Profil Alumni">
+                    <img src="images/zoom-bg-5.jpg" id="guru-img" class="inactive" alt="Upgrading Guru">
                     <img src="images/zoom-bg-5.jpg" id="contact-img" class="inactive" alt="Contact">
                     <img src="images/zoom-bg-6.jpg" id="company-intro-img" class="main-img inactive" alt="Company Intro">
                     <img src="images/zoom-bg-7.jpg" id="tautan-img" class="main-img inactive" alt="tautan">
@@ -181,7 +66,7 @@
                         <section id="menu-section" class="active">
                             <div class="row">
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#products" class="change-section">
+                                    <a href="#profil" class="change-section">
                                         <div class="black-bg btn-menu">
                                             <i class="fa fa-building"></i>
                                             <h2>Profil Sekolah</h2>
@@ -189,7 +74,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#services" class="change-section">
+                                    <a href="#program" class="change-section bigSection">
                                         <div class="black-bg btn-menu">
                                             <i class="fas fa-medal"></i>
                                             <h4>Program Unggulan</h4>
@@ -197,7 +82,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a  href="#about" class="change-section bigSection">
+                                    <a  href="#kbm" class="change-section bigSection">
                                         <div class="black-bg btn-menu">
                                             <i class="fas fa-chalkboard-teacher"></i>
                                             <h2>Kegiatan KBM</h2>
@@ -205,7 +90,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#contact" class="change-section">
+                                    <a href="#fasilitas" class="change-section bigSection">
                                         <div class="black-bg btn-menu">
                                             <i class="fas fa-laptop"></i>
                                             <h2>Fasilitas</h2>
@@ -214,7 +99,7 @@
                                 </div>
                             
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#contact" class="change-section">
+                                    <a href="#softskill" class="change-section bigSection">
                                         <div class="black-bg btn-menu">
                                             <i class="fas fa-dumbbell"></i>
                                             <h2>Penguatan Softskill</h2>
@@ -223,8 +108,8 @@
                                 </div>
 
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#contact" class="change-section">
-                                        <div class="black-bg btn-menu">
+                                    <a href="#organisasi" class="change-section">
+                                        <div class="black-bg btn-menu bigSection">
                                             <i class="fa fa-group"></i>
                                             <h2>Pembelajaran Organisasi</h2>
                                         </div>
@@ -232,7 +117,7 @@
                                 </div>
 
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#contact" class="change-section">
+                                    <a href="#alumni" class="change-section bigSection">
                                         <div class="black-bg btn-menu">
                                             <i class="fas fa-user-graduate"></i>
                                             <h2>Profil Alumni</h2>
@@ -241,7 +126,7 @@
                                 </div>
 
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#contact" class="change-section">
+                                    <a href="#guru" class="change-section">
                                         <div class="black-bg btn-menu">
                                             <i class="fas fa-cloud-upload-alt"></i>
                                             <h2>Upgrading <br/> Guru</h2>
@@ -265,18 +150,25 @@
                               
                             </div>
                         </section><!-- /.menu-section -->    
-                        <section id="products-section" class="inactive">
+                        <section id="profil-section" class="inactive">
                             <div class="row">
                                 <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                        <h2>Visi</h2>
-                                        <p>Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
+                                        <h2>Profil sekolah</h2>
+                                        <p><a href="http://smafuturegate.com">SMA Future Gate</a> berdiri sejak tahun 2011, dengan menekankan pada pendidikan yang berdasarkan pada kurikulum pendidikan nasional dan memadukan nilai-nilai Islam terintegrasi pada pembelajaran dan bahan belajar siswa.<br/><br/>
+                                        Sejak berdiri hingga kini, <a href="http://smafuturegate.com">SMA Future Gate</a> telah dua kali melaksanakan kegiatan akreditasi dengan perolehan nilai A.<br/><br/>
+                                        <a href="http://smafuturegate.com">SMA Future Gate</a>, adalah sekolah yang memiliki harapan besar membangun kaderisasi umat di masa datang.
+</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                        <h2>Visi</h2>
+                                        <p>Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
+                                    </div>
+                                    <div class="black-bg col-sm-12 col-md-12 col-lg-12 mt-2">
                                         <h2>Misi</h2>
-                                        <p>Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Curabitur nec aliquam lacus, nec molestie erat. . Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
+                                        <p>Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.  Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
                                     </div>
                                 </div>
                             </div>
@@ -290,78 +182,58 @@
                                 </div>
                             </div>
                         </section><!-- /.product-section -->    
-                        <section id="services-section" class="inactive">
+                        <section id="program-section" class="inactive">
                             <div class="row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 black-bg">
-                                        <h2>Program Bahasa</h2>
-                                        <p>Aenean quis semper metus. <a href="#">Maecenas</a> adipiscing, leo a facilisis tempor, mi quam feugiat eros, ullamcorper porttitor elit turpis ac risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non sem a leo mattis dapibus. Duis vel ornare arcu. Quisque at malesuada tortor.</p>
-                                        <p>Quisque non tempus lacus, non placerat arcu. Donec nibh ipsum, pharetra nec pellentesque at, mattis ut lorem. Fusce dapibus tristique neque, eget ultricies lorem tincidunt vitae. Aliquam erat volutpat. Integer vulputate ultricies nisl, sed vehicula justo accumsan non.</p>
-                                    </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12" style="height: 846px;overflow: visible;">
+                                    <a href="images/jurusan/ipa.png"
+                                       class="fresco"
+                                       data-fresco-group="jurusan">
+                                        <img src="images/jurusan/ipa.png" alt="" style="position: absolute;right: 15px;top: 4px;">
+                                    </a>
+                                    <a href="images/jurusan/ips.png"
+                                       class="fresco"
+                                       data-fresco-group="jurusan">
+                                        <img src="images/jurusan/ips.png" alt="" style="position: absolute;left: 17px;top: 84px;">
+                                    </a>
+                                    <a href="images/jurusan/bahasa.png"
+                                       class="fresco"
+                                       data-fresco-group="jurusan">
+                                        <img src="images/jurusan/bahasa.png" alt="" style="position: absolute;/*! bottom: 0; */right: 12px;top: 446px;">
+                                    </a>
+
                                 </div>
                             </div>
-                            <div class="row mt-2">
-                                    <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                            <h2>Program IPA</h2>
-                                            <p>Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                            <h2>Program IPS</h2>
-                                            <p>Integer posuere quam a orci tempor, ut eleifend est vulputate. Nullam vitae lectus dui. Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque. Curabitur nec aliquam lacus, nec molestie erat. . Donec vulputate ac tortor id convallis. Sed nisi mauris, laoreet vitae lacus at, viverra viverra neque.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div class="row margin-top-20">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-left">
                                     <a href="#menu" class="change-section">
-                                        <div class="black-bg btn-menu">
+                                        <div class="black-bg btn-menu btnBigSection">
                                             <h2>Back to menu</h2>
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                        </section><!-- /.services-section -->    
-                        <section id="about-section" class="inactive">
+                        </section><!-- /.program-section -->    
+                        <section id="kbm-section" class="inactive">
                             <div class="row">
                                 <div class="black-bg col-sm-12 col-md-12 col-lg-12">
                                     <h2 class="text-center">Kegiatan KBM</h2>
                                     <div class="col-sm-12 col-md-12">
                                         <div class="c-container">
                                             <div class="c-box">
-                                                <a href="http://www.youtube.com/watch?v=c0KYU2j0TM4"
-                                                   class="fresco"
-                                                   data-fresco-group="panahan"
-                                                   data-fresco-caption="Caption below the image"><img src="images/zoom-bg-1.jpg" /></a>
-                                                 <a href="images/zoom-bg-2.jpg"
-                                                    class="fresco hidden"
-                                                    data-fresco-caption="Caption below the image"
-                                                    data-fresco-group="panahan">Image 2</a>
-                                                <span>Judul</span>
-                                            </div>
-                                            <div class="c-box">
-                                                <a href="https://source.unsplash.com/1000x804"
-                                                    class="fresco"
-                                                    data-fresco-caption="Caption below the image"
-                                                    data-fresco-group="futsal"><img src="https://source.unsplash.com/1000x804" /></a>
-                                                <a href="https://source.unsplash.com/1000x805"
-                                                     class="fresco hidden"
-                                                     data-fresco-caption="Caption below the image"
-                                                     data-fresco-group="futsal">Image 2</a>>
-                                                <span>Judul</span>
-                                            </div>
-                                            <div class="c-box">
                                                 <a href="https://source.unsplash.com/1000x806"
                                                     class="fresco"
-                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-caption="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                                                     data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x806" /></a>
                                                 <a href="https://source.unsplash.com/1000x805"
                                                      class="fresco hidden"
                                                      data-fresco-caption="Caption below the image"
-                                                     data-fresco-group="unique_name">Image 2</a>>
-                                                <span>Judul</span>
+                                                     data-fresco-group="unique_name">Image 2</a>
+                                                <span>Kegiatan KBM</span>
                                             </div>
                                             <div class="c-box">
                                                 <a href="https://source.unsplash.com/1000x807"
@@ -371,8 +243,8 @@
                                                 <a href="https://source.unsplash.com/1000x805"
                                                      class="fresco hidden"
                                                      data-fresco-caption="Caption below the image"
-                                                     data-fresco-group="unique_name">Image 2</a>>
-                                                <span>Judul</span>
+                                                     data-fresco-group="unique_name">Image 2</a>
+                                                <span>Kurikulum Terpadu & Konfiguratif</span>
                                             </div>
                                         </div>
                                     </div>
@@ -387,7 +259,7 @@
                                                     class="fresco hidden"
                                                     data-fresco-caption="Caption below the image"
                                                     data-fresco-group="panahan">Image 2</a>
-                                                <span>Judul</span>
+                                                <span>FG College</span>
                                             </div>
                                             <div class="c-box">
                                                 <a href="https://source.unsplash.com/1000x814"
@@ -397,8 +269,8 @@
                                                 <a href="https://source.unsplash.com/1000x805"
                                                      class="fresco hidden"
                                                      data-fresco-caption="Caption below the image"
-                                                     data-fresco-group="futsal">Image 2</a>>
-                                                <span>Judul</span>
+                                                     data-fresco-group="futsal">Image 2</a>
+                                                <span>KISS</span>
                                             </div>
                                             <div class="c-box">
                                                 <a href="https://source.unsplash.com/1000x816"
@@ -408,8 +280,8 @@
                                                 <a href="https://source.unsplash.com/1000x805"
                                                      class="fresco hidden"
                                                      data-fresco-caption="Caption below the image"
-                                                     data-fresco-group="unique_name">Image 2</a>>
-                                                <span>Judul</span>
+                                                     data-fresco-group="unique_name">Image 2</a>
+                                                <span>Peduli Sosial</span>
                                             </div>
                                             <div class="c-box">
                                                 <a href="https://source.unsplash.com/1000x817"
@@ -419,13 +291,10 @@
                                                 <a href="https://source.unsplash.com/1000x805"
                                                      class="fresco hidden"
                                                      data-fresco-caption="Caption below the image"
-                                                     data-fresco-group="unique_name">Image 2</a>>
-                                                <span>Judul</span>
+                                                     data-fresco-group="unique_name">Image 2</a>
+                                                <span>Kajian Islam</span>
                                             </div>
                                     </div>
-                                    <!-- <div class="col-sm-6 col-md-6">
-                                        <p>Sed ac risus sit amet nisl tempus egestas. Sed a fermentum mauris, nec ultricies lorem. Maecenas auctor a augue sodales aliquam. Vestibulum imperdiet quam vel felis dignissim, sed iaculis nulla malesuada. Vivamus non rhoncus neque, sed elementum lorem. Aenean non leo mauris. Donec at suscipit lectus. Donec justo ipsum, scelerisque eu nisl in, sollicitudin posuere justo.</p>
-                                    </div> -->
                                 </div>
                             </div>
                             </div>
@@ -439,7 +308,341 @@
                                     </a>
                                 </div>
                             </div>
-                        </section><!-- /.about-section -->    
+                        </section><!-- /.kbm-section -->    
+
+                        <section id="fasilitas-section" class="inactive">
+                            <div class="row">
+                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                    <h2 class="text-center">Fasilitas</h2>
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="c-container">
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x806"
+                                                    class="fresco"
+                                                    data-fresco-caption="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                    data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x806" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="unique_name">Image 2</a>
+                                                <span>Ruang Kelas</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x807"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x807" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="unique_name">Image 2</a>
+                                                <span>Ruang Asrama</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: -8vh" class="col-sm-12 col-md-12">
+                                        <div class="c-container">
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="panahan"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x824" /></a>
+                                                 <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="panahan">Image 2</a>
+                                                <span>Gedung</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x814"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="futsal"><img src="https://source.unsplash.com/1000x814" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="futsal">Image 2</a>
+                                                <span>Taman</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x816"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x816" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="unique_name">Image 2</a>
+                                                <span>Masjid</span>
+                                            </div>
+                                            <div class="c-box">
+                                                <a href="https://source.unsplash.com/1000x817"
+                                                    class="fresco"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="unique_name"><img src="https://source.unsplash.com/1000x817" /></a>
+                                                <a href="https://source.unsplash.com/1000x805"
+                                                     class="fresco hidden"
+                                                     data-fresco-caption="Caption below the image"
+                                                     data-fresco-group="unique_name">Image 2</a>
+                                                <span>LRC</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div class="row margin-top-20">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                                    <a href="#menu" class="change-section btnBigSection">
+                                        <div class="black-bg btn-menu">
+                                            <h2>Back to menu</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section><!-- /.fasilitas-section -->   
+                        
+                        <section id="softskill-section" class="inactive">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-8 col-lg-8 margin-bottom-20">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="img-container">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="softskill"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x814" /></a>
+                                                <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="softskill">Image 2</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="img-container">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="softskill"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x824" /></a>
+                                                <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="softskill">Image 2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="img-container">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="softskill"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x834" /></a>
+                                                <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="softskill">Image 2</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="img-container">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="softskill"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x854" /></a>
+                                                <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="softskill">Image 2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                        <h2>Penguatan softskill</h2>
+                                        <p>Siswa diberikan pembekalan dengan adanya kegiatan praktek yang terus dieksplorasi dari setiap jurusan yag ada di sekolah. Hal tersebut tercermin dalam beberapa kegiatan praktikum yang dilaksanakan oleh setiap jurusan</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-right mt-2">
+                                        <a href="#menu" class="change-section">
+                                            <div class="black-bg btn-menu btnBigSection">
+                                                <h2>Back to menu</h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section><!-- /.softskill-section --> 
+
+                        <section id="organisasi-section" class="inactive">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <div class="black-bg col-sm-12 col-md-12 col-lg-12 text-center">
+                                        <h2>Pembelajaran Organisasi</h2>
+                                        <p class="text-center">Pentingnya pengaturan terhadap organisasi, menjadikan sekolah merasa perlu membangun nilai-nilai manajerial yang baik bagi para siswa. Pembekalan kepemimpinan, membangun kerja tim yang solid, hingga perencanaan program sampai dengan evaluasi, juga merupakan bagian dari pengayaan pembelajaran bagi para siswa</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-right mt-2">
+                                        <a href="#menu" class="change-section">
+                                            <div class="black-bg btn-menu btnBigSection">
+                                                <h2>Back to menu</h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-8 col-lg-8 margin-bottom-20">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="img-container">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="organisasi"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x814" /></a>
+                                                <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="organisasi">Image 2</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="img-container">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="organisasi"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x824" /></a>
+                                                <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="organisasi">Image 2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="img-container">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="organisasi"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x834" /></a>
+                                                <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="organisasi">Image 2</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="img-container">
+                                                <a href="https://source.unsplash.com/1000x824"
+                                                   class="fresco"
+                                                   data-fresco-group="organisasi"
+                                                   data-fresco-caption="Caption below the image"><img src="https://source.unsplash.com/1000x854" /></a>
+                                                <a href="images/zoom-bg-2.jpg"
+                                                    class="fresco hidden"
+                                                    data-fresco-caption="Caption below the image"
+                                                    data-fresco-group="organisasi">Image 2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section><!-- /.organisasi-section --> 
+
+                        <section id="alumni-section" class="inactive">
+                            <div class="row mt-2">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="white-bg">
+                                        <h2>Fulan Ibn Fulan</h2>
+                                        <img src="https://source.unsplash.com/1000x814" class="profile-img" />
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tempora saepe earum asperiores nostrum debitis beatae quisquam dolorem, porro velit!</p>
+                                    </div>
+                                </div>
+                                 <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="white-bg">
+                                        <h2>Fulan Ibn Fulan</h2>
+                                        <img src="https://source.unsplash.com/1000x814" class="profile-img" />
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tempora saepe earum asperiores nostrum debitis beatae quisquam dolorem, porro velit!</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="white-bg">
+                                        <h2>Fulan Ibn Fulan</h2>
+                                        <img src="https://source.unsplash.com/1000x814" class="profile-img" />
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tempora saepe earum asperiores nostrum debitis beatae quisquam dolorem, porro velit!</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="white-bg">
+                                        <h2>Fulan Ibn Fulan</h2>
+                                        <img src="https://source.unsplash.com/1000x814" class="profile-img" />
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tempora saepe earum asperiores nostrum debitis beatae quisquam dolorem, porro velit!</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-12">
+                                    <div class="black-bg text-center" style="padding: 25px;">
+                                        <p>Sejak tahun 2014, lulusan SMA Future Gate sudah mengikuti perkuliahan di Perguruan Tinggi Negeri dan Swasta, baik dalam maupun luar negeri. Sebagian besar kampus favorit di dalam negeri, sudah terdapat lulusan dari SMA Future Gate. Alumni SMA Future Gate juga ada yang berkontribusi di tengah masyarakat, dalam bidang sosial, keagamaan, dan kesusateraan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row margin-top-20">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                                    <a href="#menu" class="change-section">
+                                        <div class="black-bg btn-menu btnBigSection">
+                                            <h2>Back to menu</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section><!-- /.alumni-section --> 
+
+                        <section id="guru-section" class="inactive">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="upgrade-img">
+                                        <img src="https://source.unsplash.com/1000x814" />
+                                    </div>
+                                </div>
+                                 <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="upgrade-img">
+                                        <img src="https://source.unsplash.com/1000x814" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="upgrade-img">
+                                        <img src="https://source.unsplash.com/1000x814" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="upgrade-img">
+                                        <img src="https://source.unsplash.com/1000x814" />
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="row  mt-2">
+                                <div class="col-lg-12">
+                                    <div class="black-bg text-center">
+                                        <p class="text-center" style="margin: 15px;">Sebagai sekolah yang memiliki kekhasan, maka SMA Future Gate merasa wajib utuk membangun dan meningkatkan kapasitas para guru. Bukan hanya sekedar kemampuan dalam memberikan pembelajaran bagi siswa, namun juga pada nilai-nilai lain yang bisa mempengaruhi kinerja guru di sekolah, perannya sebagai warga masyarakat dan kewajibannya di tengah keluarga.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row margin-top-20">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                                    <a href="#menu" class="change-section">
+                                        <div class="black-bg btn-menu">
+                                            <h2>Back to menu</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section><!-- /.guru-section --> 
+
                         <section id="contact-section" class="inactive">
                             <div class="row">
                                 <div class="black-bg col-sm-12 col-md-12 col-lg-12">
