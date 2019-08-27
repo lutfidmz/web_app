@@ -1,9 +1,9 @@
 <?php
 
 // insert data pendaftaran
-$servername = "localhost";
+$servername = "si.smafuturegate.com:2011";
 $username = "root";
-$password = "";
+$password = "#B!smillah";   
 $dbname = "web_app";
 
 $nama = $_POST['txtNama'];
@@ -21,32 +21,28 @@ $sql = "INSERT INTO pendaftaran (nama, whatsapp, sekolah, keterangan, ts_id)
         VALUES ('$nama', '$wa', '$sekolah', '$ket', 'web_app')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "<script>
-            alert('Data $nama Berhasil Di Input');
-            window.location.href = './';
-          </script>";
-    // header("location: ./");
+    // echo "<script>
+    //         alert('Data $nama Berhasil Di Input');
+    //         window.location.href = './';
+    //       </script>";
+    // // header("location: ./");
     // echo 'Data Berhasil Di Input';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    die();
 }
 
 mysqli_close($conn);
-die();
-
-// belum bisa karena harus penyesuaian fgbot nya
-// insert message
-$servername = "si.smafuturegate.com:2011";
-$username = "root";
-$password = "#B!smillah";
-$dbname = "fgsis_msg";
+// die();
 
 // ini nanti link bentuk pesannya dikirim ke wa info fg aja
-$text = $_GET['text'];
-$num = $_GET['num'];
+$text = "Assalamualaikum Ibu/Bapak dari ananda *".ucfirst($nama)."*
+Terimakasih telah mendaftar ke SMA Future Gate
+InsyaAllah akan segera kami hubungi ketika tanggal PPDB sudah dibuka
+Berikut adalah tautan untuk akses ke Tautan-Tautan penting lainnya http://si.smafuturegate.com/tautan-penting";
+$num = $wa;
 $message = rawurlencode($text);
 $url = "https://api.whatsapp.com/send?phone=".$num."&text=".$message;
-echo $url;
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -54,7 +50,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SET FOREIGN_KEY_CHECKS = 0;
+$sql = "
 insert into fgsis_msg.outbox (contact_id
 ,recipient
 ,recipient_name
@@ -62,26 +58,20 @@ insert into fgsis_msg.outbox (contact_id
 ,`status`
 ,jenis
 ,aktif
-,info
-,info2
-,info3
 ,tsid
 ,InsertIntoDB
 )
-VALUES(vcontact_id
-            ,vrecipient
-            ,vrecipient_name
-            ,vmessage
-            ,vstatus
-            ,vjenis
+VALUES(521
+            ,'6281318123418'
+            ,'111201006 #SAIBANI KURNIAJATI, A.Md #3418'
+            ,'$url'
+            ,'Q'
+            ,'i'
             ,1
-            ,vtsid
-            ,vinfo2
-            ,vinfo3				
-            ,vtsid
+            ,'web_app'
             ,now()
             );
-SET FOREIGN_KEY_CHECKS = 1;";
+";
 
 if (mysqli_query($conn, $sql)) {
     echo "<script>

@@ -29,7 +29,7 @@ jQuery(function($) {
                 menuDisabled = true; // disable to menu
                 
                 var name = $(this).attr('href');
-                console.log(name);
+                // console.log(name);
                 // get image url and assign to backstretch for background
                 var imgSrc = $("img"+name+"-img").attr('src');
                 $.backstretch(imgSrc, {speed: 400}); //backstretch for background fade in/out
@@ -41,7 +41,7 @@ jQuery(function($) {
                         $(this).addClass("active");
                         
                         // google map need to resize for animate contents
-                        google.maps.event.trigger(map, 'resize'); // resize map
+                        // google.maps.event.trigger(map, 'resize'); // resize map
                         $.backstretch("resize"); // resize the background image
                         menuDisabled = false;
                      });
