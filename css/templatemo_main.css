@@ -333,40 +333,43 @@ img.slide {
     }
 
     .c-container {
-    display: flex;
-    width: 100%;
-    padding: 4% 2%;
-    box-sizing: border-box;
-    height: 40vh;
+        display: flex;
+        width: 100%;
+        padding: 4% 2%;
+        box-sizing: border-box;
+        height: 40vh;
     }
 
     .c-box {
-    flex: 1;
-    overflow: hidden;
-    transition: .5s;
-    margin: 0 0.5%;
-    box-shadow: 0 20px 30px rgba(0,0,0,.1);
-    line-height: 0;
-    border-radius: 0 40px;
+        flex: 1;
+        overflow: hidden;
+        transition: .5s;
+        margin: 0 0.5%;
+        box-shadow: 6px 6px 8px rgb(0, 0, 0);
+        line-height: 0;
+        border-radius: 0 40px;
+
     }
 
     .c-box > a > img {
-    width: 200%;
-    height: calc(100% - 10vh);
-    object-fit: cover; 
-    transition: .5s;
+        width: 200%;
+        object-fit: cover; 
+        transition: .5s;
     }
 
     .c-box > span {
-    font-size: 3.8vh;
-    display: block;
-    text-align: center;
-    height: 10vh;
-    line-height: 2.6;
-    color: white;
-    position: absolute;
-    bottom: 13.5vh;
-    padding-left: 8pt;
+        font-size: 3.8vh;
+        display: block;
+        text-align: center;
+        height: 10vh;
+        line-height: 2.6;
+        color: white;
+        position: absolute;
+        bottom: 6.5vh;
+        padding-left: 8pt;
+        padding-right: 8pt;
+        background-color: #000d;
+        border-radius: 40px;
     }
 
     .c-box:hover > span {
@@ -375,8 +378,8 @@ img.slide {
 
     .c-box:hover { flex: 1 1 50%; }
     .c-box:hover > a > img {
-    width: 100%;
-    height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     .margin-top-5vh{
@@ -425,16 +428,14 @@ img.slide {
     }
 
     .img-container > a > img {
-        width: 100%;
+        width: 115%;
         height: auto;
-        background-color: #000;
-        box-shadow: 5px 8px 12px #000d;
-        border-radius: 20px 20px;
         transition: 0.2s ease-in;
+        object-fit: cover;
     }
 
     .img-container > a > img:hover {
-        width: 105%;
+        width: 155%;
         transition: 0.2s ease-in;
     }
 
@@ -453,7 +454,6 @@ img.slide {
     }
 
     .upgrade-img {
-
         width: 100%;
         padding: 2px;
         height: 370px;
@@ -461,4 +461,17 @@ img.slide {
         border-radius: 20px;
         box-shadow: 4px 4px 4px #0008;
 
+    }
+
+    .img-container{
+        height: 225px;
+        background-color: #000;
+        box-shadow: 5px 8px 12px #000d;
+        border-radius: 20px 20px;
+        overflow: hidden;
+    }
+
+    .upgrade-img > a > img {
+        transform: translate(-132px);
+        height: 100%;
     }
